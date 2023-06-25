@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+:root{
+    --color:#FFFFFF;
+}
+body{
+    background: rgb(2,0,36);
+}
+.heading{
+    margin-block: 1.2rem;
+    text-align: center;
+    color: var(--color);
+}
+.box{
+    margin-top: 7rem;
+    margin-inline: 13rem;
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    text-align: center;
+    color: var(--color);
+    margin-bottom: 7rem;
+}
+.button{
+    margin-top: 13rem;
+    text-align: center;
+    
+}
+.button1{
+    padding-inline: 3rem;
+    padding-block: 1rem;
+    border-radius: 1rem;
+}
+.button1:hover{
+    background-color: red;
+    color:var(--color);
+    border: 1px solid black;
+}
+#img1{
+    height: 19rem;
+    width: 19rem;
+}
+#img2{
+    height: 19rem;
+    width: 19rem;
+}
+
+
+/* Small screens and laptops */
+@media screen and (max-width: 1024px) {
+    .box{
+        margin-inline: 5rem;
+    }
+    #img1{
+        height: 15rem;
+        width: 15rem;
+    }
+    #img2{
+        height: 15rem;
+        width: 15rem;
+    }
+}
+
+/* iPads, Tablets */
+@media screen and (max-width: 768px) {
+    .box{
+        margin-inline: 0rem;
+    }
+    #img1{
+        height: 8rem;
+        width: 8rem;
+    }
+    #img2{
+        height: 8rem;
+        width: 8rem;
+    }
+    h1{
+        margin-bottom: 4rem;
+    }
+    .button{
+        margin-top: 4rem; 
+    }
+    .box{
+        margin-top: 4rem;
+    }
+}

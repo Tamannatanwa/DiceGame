@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://g.co/kgs/93n76C">
+    <title>Dice Game</title>
+</head>
+<body>
+    <br>
+    <h1 class="heading" id = "main"> 🌺 My Dice Game 🌺</h1>
+    <div class="box">
+        <div>
+            <h1>Player 1</h1>
+            <img id = "img1" src="./Images/dice1.png" alt="dic1">
+        </div>
+        <div>
+            <h1>Player 2</h1>
+            <img id = "img2" src="./Images/dice3.png" alt="">
+        </div>
+    </div>
+    <div class="button"><button  class = "button1" onclick="add()">start</button></div>
+    <script>
+        const image = ["./Images/dice1.png","./Images/dice2.png","./Images/dice3.png","./Images/dice4.png","./Images/dice5.png","./Images/dice6.png"];
+        const element =   document.getElementById("main");
+        function add(){
+            const audio = new Audio();
+            audio.src = "./audio/tone.mp3";
+            audio.play()
+            const b= parseInt(Math.random()*6);
+            const c= parseInt(Math.random()*6);
+            if (b>c){
+                element.textContent = "🎈 Player 1 wins 🎈";
+                }
+            else if (c>b){
+                element.textContent = "🎈 Player 2 wins 🎈";
+            }
+            else{
+                element.textContent="Oops It's Draw ☹️☹️☹️☹️!!";
+            }
+            document.getElementById("img1").src = image[b];
+            document.getElementById("img2").src = image[c];
+        }
+    </script>
+</body>
+</html>
